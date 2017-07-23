@@ -2,8 +2,16 @@ const express = require('express')
 const serialport = require('serialport')
 const app = express()
 const glob = require("glob")
+const os = require('os')
+const ifaces = os.networkInterfaces()
 
 const baud = 57600
+
+Object.keys(ifaces).forEach(function (ifname) {
+  ifaces[ifname].forEach(function (iface) {
+    console.log(ifname, iface.address)
+  })
+})
 
 glob("/dev/ttyUSB*", function (er, devices) {
   const device = devices[0]
