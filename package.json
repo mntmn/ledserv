@@ -1,0 +1,17 @@
+{
+  "name": "ledserv",
+  "version": "0.0.1",
+  "description": "",
+  "author": "mntmn <lukas@mnt.mn>",
+  "main": "ledserv.js",
+  "repository": {
+    "type":"git",
+    "url": "git://github.com/mntmn/ledserv.git"
+  },
+  "dependencies": {
+    "serialport": "*",
+    "express": "*",
+    "glob": "*"
+  },
+  "license": "MIT"
+}
